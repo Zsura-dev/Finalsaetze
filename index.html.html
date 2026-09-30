@@ -1,0 +1,440 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finalsätze und finale Angaben – B2/B2+</title><style>
+*{box-sizing:border-box}body{margin:0;background:#183f52;color:#172a3a;font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+.page{max-width:1060px;margin:0 auto;min-height:100vh;background:#f6f8f9;padding:0 34px 48px}.exercise{display:none}.exercise.active{display:block}#home{display:block}#home.inactive{display:none}
+.hero{margin:0 -34px 28px;padding:54px 44px 46px;background:#173b50;color:#fff}.hero h1{font-size:42px;margin:5px 0}.hero p{margin:0;color:#d9e6eb;font-size:18px}
+.eyebrow{font-size:13px;letter-spacing:1.6px;font-weight:700;color:#3d7f92}.hero .eyebrow,.topbar .eyebrow{color:#7eb7c6}
+.card{background:#fff;border:1px solid #dce5e8;border-radius:14px;padding:24px 28px;margin:18px 0;box-shadow:0 3px 14px rgba(15,43,58,.05)}
+.card h2{margin:0 0 12px;font-size:20px}.intro{margin-top:0}.overview{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.overview div{background:#eef5f6;border-left:4px solid #3c8998;padding:13px 15px}.overview span{display:block;font-size:13px;color:#5b6c75;margin-top:3px}
+.muted{color:#687b84;font-size:13px}.note{background:#f2f4f5;padding:14px 16px;border-radius:8px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:13px}.menu button{position:relative;text-align:left;border:2px solid #2f8a78;background:#f7fcfa;padding:20px 20px 18px 62px;border-radius:12px;cursor:pointer;color:#172a3a}
+.menu button:hover{border-color:#176b5b;background:#edf8f4;transform:translateY(-2px);box-shadow:0 5px 14px rgba(23,107,91,.13)}.menu button span{position:absolute;left:19px;top:20px;font-size:13px;font-weight:bold;color:#4d8290}
+.menu b{display:block;font-size:17px}.menu small{display:block;color:#667983;margin-top:3px}
+.topbar{margin:0 -34px 25px;padding:25px 34px;background:#173b50;color:#fff;display:flex;gap:20px;align-items:flex-start}.topbar h1{margin:2px 0 0;font-size:30px}.topbar p{margin:2px 0;color:#d7e4e9}
+.home{border:2px solid #8bcbb7;background:#21495a;color:#fff;height:44px;border-radius:9px;padding:0 12px;display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}.home:hover{background:#2f756d;border-color:#a4dac9}
+.rule{border-left:5px solid #2e8291}.example{background:#edf5f6}.example h2{font-size:15px;text-transform:uppercase;letter-spacing:.7px}
+.tasks{padding-bottom:28px}.item{display:flex;gap:14px;padding:20px 0;border-bottom:1px solid #e0e6e8}.n{font-weight:bold;color:#52707d;width:24px}.work{flex:1;min-width:0}.prompt{font-size:13px;color:#59717c;margin-bottom:8px}
+.sentence{font-size:16px}.answer{border:0;border-bottom:2px solid #809aa5;background:#f7fafb;padding:8px 9px;font-size:16px;min-width:210px;outline:none;margin:2px 4px}.answer.m{width:300px}.answer.l{width:430px;max-width:100%}.answer.xl{width:560px;max-width:95%}
+.answer:focus-visible,button:focus-visible{outline:3px solid #2f8a78;outline-offset:3px}select.answer{width:auto;min-width:150px}.answer.ok{border-color:#27815e;background:#edf8f2}.answer.bad{border-color:#b34b4b;background:#fff1f1}
+.feedback{font-size:13px;margin-top:7px}.feedback.good{color:#216b50}.feedback.wrong{color:#a13f3f}.controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.controls button{border:1px solid #b9c9cf;background:#fff;color:#193243;border-radius:8px;padding:10px 16px;font-weight:bold;cursor:pointer}.controls .check{background:#1d7180;color:#fff;border-color:#1d7180}
+.solutionbox{margin-top:18px;background:#f0f5f6;border-radius:10px;padding:16px 20px}.solutionbox ol{margin:8px 0 0;padding-left:22px}.solutionbox li{margin:5px 0}
+@media(max-width:760px){.page{padding:0 16px 30px}.hero,.topbar{margin-left:-16px;margin-right:-16px}.hero{padding:38px 22px}.hero h1{font-size:32px}.overview,.menu{grid-template-columns:1fr}.answer.m,.answer.l,.answer.xl{width:100%;max-width:100%;margin:6px 0}.topbar{padding:20px 16px}}
+.houseIcon{position:relative;width:17px;height:14px;border:2px solid currentColor;border-top:0;margin-top:5px;display:inline-block}.houseIcon:before{content:"";position:absolute;width:11px;height:11px;border-left:2px solid currentColor;border-top:2px solid currentColor;transform:rotate(45deg);left:1px;top:-7px}.instruction{background:#f1f7f5;border-left:4px solid #2f8a78;padding:11px 13px;margin:0 0 12px;font-weight:700}
+/* ===== Mobile-first final layer ===== */
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+button,input,select{font-family:inherit}
+button{touch-action:manipulation}
+.answer{font-size:16px} /* prevents iPhone zoom on focus */
+
+@media(max-width:760px){
+  body{background:#f6f8f9}
+  .page{width:100%;max-width:none;min-height:100vh;padding:0 14px 32px}
+  .hero{margin:0 -14px 18px;padding:30px 18px 28px}
+  .hero h1{font-size:29px;line-height:1.12;margin:6px 0 8px}
+  .hero p{font-size:16px;line-height:1.4}
+  .eyebrow{font-size:12px;letter-spacing:1.2px}
+  .card{padding:18px 16px;margin:14px 0;border-radius:12px}
+  .card h2{font-size:19px}
+  .overview{grid-template-columns:1fr;gap:9px}
+  .overview div{padding:12px 13px}
+  .menu{grid-template-columns:1fr;gap:11px}
+  .menu button{
+    min-height:76px;width:100%;padding:16px 15px 15px 56px;
+    border-width:2px;border-radius:12px;
+  }
+  .menu button span{left:16px;top:17px}
+  .menu b{font-size:17px;line-height:1.25}
+  .menu small{font-size:13px;line-height:1.35;margin-top:5px}
+  .topbar{
+    margin:0 -14px 16px;padding:14px;
+    position:sticky;top:0;z-index:20;
+    align-items:center;box-shadow:0 2px 9px rgba(0,0,0,.12)
+  }
+  .topbar>div{min-width:0}
+  .topbar h1{font-size:21px;line-height:1.15;margin:1px 0}
+  .topbar p{display:none}
+  .topbar .eyebrow{font-size:10px}
+  .home{
+    flex:0 0 auto;height:46px;min-width:46px;padding:0 11px;
+    border-radius:9px;font-size:13px
+  }
+  .houseIcon{width:16px;height:13px}
+  .rule p,.example p,.note{font-size:15px}
+  .instruction{font-size:15px;line-height:1.45;margin-bottom:5px}
+  .item{display:block;padding:18px 0}
+  .n{
+    width:auto;display:inline-flex;align-items:center;justify-content:center;
+    min-width:28px;height:28px;border-radius:50%;
+    background:#e7f3ef;color:#236b5c;margin-bottom:9px
+  }
+  .work{width:100%}
+  .sentence{font-size:16px;line-height:1.65}
+  .answer,.answer.m,.answer.l,.answer.xl,select.answer{
+    display:block;width:100%;max-width:100%;min-width:0;
+    min-height:46px;margin:9px 0 3px;padding:10px 11px;
+    border:1px solid #9db1b8;border-bottom:2px solid #527c86;
+    border-radius:8px;background:#fbfdfd
+  }
+  select.answer{appearance:auto}
+  .feedback{font-size:14px;margin-top:6px}
+  .controls{display:grid;grid-template-columns:1fr;gap:9px;margin-top:20px}
+  .controls button{
+    width:100%;min-height:48px;margin:0;padding:12px 14px;
+    font-size:15px;border-radius:9px
+  }
+  .solutionbox{padding:15px 16px;font-size:15px}
+  .solutionbox li{margin:8px 0}
+}
+@media(max-width:390px){
+  .page{padding-left:12px;padding-right:12px}
+  .hero,.topbar{margin-left:-12px;margin-right:-12px}
+  .hero h1{font-size:27px}
+  .home span:last-child{display:none}
+  .home{width:46px;padding:0;justify-content:center}
+}
+
+</style></head><body>
+<section class="page active" id="home">
+  <header class="hero">
+    <div class="eyebrow">GRAMMATIK · B2/B2+</div>
+    <h1>Finalsätze und finale Angaben</h1>
+    <p>Digitale Welt · Ehrenamt · Alltag</p>
+  </header>
+  <div class="intro card">
+    <h2>Wie drückt man einen Zweck aus?</h2>
+    <p><b>Fragen:</b> Wozu? · Zu welchem Zweck? · Wofür?</p>
+    <div class="overview">
+      <div><b>um … zu + Infinitiv</b><span>Wozu? / Zu welchem Zweck? · gleiches Subjekt</span></div>
+      <div><b>damit + Nebensatz</b><span>Wozu? / Zu welchem Zweck? · besonders bei verschiedenen Subjekten</span></div>
+      <div><b>zu + Dativ</b><span>Wozu? · Nominalisierung: zur Vorbereitung</span></div>
+      <div><b>für + Akkusativ</b><span>Wofür? · Nominalisierung: für die Vorbereitung</span></div>
+    </div>
+    <div class="note"><b>Wichtig bei Präpositionen:</b> Die Handlung wird als Nomen ausgedrückt: 
+      <i>überprüfen → die Überprüfung</i>, <i>durchführen → die Durchführung</i>, <i>schützen → der Schutz</i>.
+    </div>
+  </div>
+  <div class="menu">
+    <button onclick="openPage('umzu')"><span>01</span><b>um … zu + Infinitiv</b><small>Finalsatz mit gleichem Subjekt</small></button>
+    <button onclick="openPage('damit')"><span>02</span><b>damit + Nebensatz</b><small>Finalsatz mit eigenem Subjekt</small></button>
+    <button onclick="openPage('choice')"><span>03</span><b>um … zu oder damit?</b><small>Form auswählen</small></button>
+    <button onclick="openPage('zu')"><span>04</span><b>zu + Dativ</b><small>Nominalisierung</small></button>
+    <button onclick="openPage('fuer')"><span>05</span><b>für + Akkusativ</b><small>Nominalisierung</small></button>
+  </div>
+</section>
+
+    <section class="page exercise" id="umzu">
+      <header class="topbar">
+        <button class="home" onclick="goHome()" aria-label="Startseite"><span class="houseIcon" aria-hidden="true"></span><span>Startseite</span></button>
+        <div><div class="eyebrow">FINALSÄTZE · B2/B2+</div><h1>um … zu + Infinitiv</h1><p>Gleiches Subjekt in Hauptsatz und Finalsatz.</p></div>
+      </header>
+      <div class="card rule"><h2>Regel</h2>
+<p><b>Wozu? / Zu welchem Zweck?</b></p>
+<p>Az <b>um … zu + Infinitiv</b> szerkezetet akkor használjuk, ha a két mondat alanya ugyanaz.</p>
+<p><b>Fontos:</b> A <b>wollen</b> és <b>möchten</b> igét elhagyjuk az átalakításkor, ha a kiinduló mondatban csak a célt fejezik ki.</p>
+<p><i>Ich lerne viel. Ich möchte die Prüfung bestehen.</i><br>→ Ich lerne viel, <b>um die Prüfung zu bestehen.</b></p>
+<p>Más módbeli segédige megmaradhat: <i>um die Datei öffnen zu können</i>.</p></div><div class="card example"><h2>Beispiel</h2><p><b>Lea besucht einen Kurs. Sie möchte ihre Deutschkenntnisse verbessern.</b><br>
+→ Lea besucht einen Kurs, <b>um ihre Deutschkenntnisse zu verbessern.</b></p></div>
+      <div class="card tasks"><h2>Übung</h2><p class="instruction">Verbinde die Satzpaare mit <b>um … zu</b>. Behalte die vorgegebenen Wörter bei.</p>
+    <div class="item">
+      <div class="n">1</div>
+      <div class="work">
+        
+        <div class="sentence">Lea macht einen Onlinekurs. Sie möchte ihre digitalen Kompetenzen verbessern.<br><b>Lea macht einen Onlinekurs, </b><input class="answer l" data-answer="um ihre digitalen Kompetenzen zu verbessern." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">2</div>
+      <div class="work">
+        
+        <div class="sentence">Wir gingen früher los. Wir wollten den Zug nicht verpassen.<br><b>Wir gingen früher los, </b><input class="answer l" data-answer="um den Zug nicht zu verpassen." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">3</div>
+      <div class="work">
+        
+        <div class="sentence">Mara muss die App aktualisieren. Sie möchte die neue Funktion nutzen können.<br><b>Mara muss die App aktualisieren, </b><input class="answer l" data-answer="um die neue Funktion nutzen zu können." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">4</div>
+      <div class="work">
+        
+        <div class="sentence">Jonas engagiert sich im Jugendzentrum. Er möchte andere Jugendliche unterstützen.<br><b>Jonas engagiert sich im Jugendzentrum, </b><input class="answer l" data-answer="um andere Jugendliche zu unterstützen." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">5</div>
+      <div class="work">
+        
+        <div class="sentence">Ich habe die Datei in der Cloud gespeichert. Ich wollte sie später von zu Hause aus bearbeiten.<br><b>Ich habe die Datei in der Cloud gespeichert, </b><input class="answer xl" data-answer="um sie später von zu Hause aus zu bearbeiten." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="check" type="button" onclick="checkPage(this)">Überprüfen</button>
+      <button type="button" onclick="showSolutions(this)">Lösung</button>
+      <button type="button" onclick="resetPage(this)">Neu beginnen</button>
+    </div></div>
+    </section>
+    <section class="page exercise" id="damit">
+      <header class="topbar">
+        <button class="home" onclick="goHome()" aria-label="Startseite"><span class="houseIcon" aria-hidden="true"></span><span>Startseite</span></button>
+        <div><div class="eyebrow">FINALSÄTZE · B2/B2+</div><h1>damit + Nebensatz</h1><p>Finalsatz mit eigenem Subjekt.</p></div>
+      </header>
+      <div class="card rule"><h2>Regel</h2>
+<p><b>Wozu? / Zu welchem Zweck?</b></p>
+<p>A <b>damit</b> célhatározói mellékmondatot vezet be. A ragozott ige a mondat végére kerül. Leginkább akkor használjuk, ha a két mondat alanya különböző.</p>
+<p><b>Fontos:</b> A <b>wollen, möchten</b> és <b>sollen</b> igét nem tesszük bele a <b>damit</b>-mondatba, ha a kiinduló mondatban a célt fejezik ki.</p>
+<p><i>Alle Schüler sollen die Aufgabe verstehen.</i><br>→ Die Lehrerin erklärt die Aufgabe noch einmal, <b>damit alle Schüler die Aufgabe verstehen.</b></p>
+<p>Más módbeli segédige megmaradhat: <i>damit die Schüler die Datei öffnen können</i>.</p></div><div class="card example"><h2>Beispiel</h2><p><b>Ich schicke dir den Link. Du kannst dich anmelden.</b><br>
+→ Ich schicke dir den Link, <b>damit du dich anmelden kannst.</b></p></div>
+      <div class="card tasks"><h2>Übung</h2><p class="instruction">Verbinde die Satzpaare mit <b>damit</b>. Behalte die vorgegebenen Wörter bei.</p>
+    <div class="item">
+      <div class="n">1</div>
+      <div class="work">
+        
+        <div class="sentence">Die Lehrerin lädt die Datei hoch. Die Schüler können sie zu Hause bearbeiten.<br><b>Die Lehrerin lädt die Datei hoch, </b><input class="answer xl" data-answer="damit die Schüler sie zu Hause bearbeiten können." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">2</div>
+      <div class="work">
+        
+        <div class="sentence">Wir erklären den neuen Freiwilligen den Ablauf. Sie finden sich schnell zurecht.<br><b>Wir erklären den neuen Freiwilligen den Ablauf, </b><input class="answer l" data-answer="damit sie sich schnell zurechtfinden." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">3</div>
+      <div class="work">
+        
+        <div class="sentence">Die Organisation veröffentlicht den Termin frühzeitig. Alle Helfer können rechtzeitig planen.<br><b>Die Organisation veröffentlicht den Termin frühzeitig, </b><input class="answer xl" data-answer="damit alle Helfer rechtzeitig planen können." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">4</div>
+      <div class="work">
+        
+        <div class="sentence">Ich schicke dir den Link noch einmal. Du findest die Anmeldung leichter.<br><b>Ich schicke dir den Link noch einmal, </b><input class="answer l" data-answer="damit du die Anmeldung leichter findest." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">5</div>
+      <div class="work">
+        
+        <div class="sentence">Die Stadt stellt kostenloses WLAN bereit. Besucher können die digitale Karte nutzen.<br><b>Die Stadt stellt kostenloses WLAN bereit, </b><input class="answer xl" data-answer="damit Besucher die digitale Karte nutzen können." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="check" type="button" onclick="checkPage(this)">Überprüfen</button>
+      <button type="button" onclick="showSolutions(this)">Lösung</button>
+      <button type="button" onclick="resetPage(this)">Neu beginnen</button>
+    </div></div>
+    </section>
+    <section class="page exercise" id="choice">
+      <header class="topbar">
+        <button class="home" onclick="goHome()" aria-label="Startseite"><span class="houseIcon" aria-hidden="true"></span><span>Startseite</span></button>
+        <div><div class="eyebrow">FINALSÄTZE · B2/B2+</div><h1>um … zu oder damit?</h1><p>Entscheide nach dem Subjekt.</p></div>
+      </header>
+      <div class="card rule"><h2>Regel</h2>
+<p><b>Azonos alany → um … zu használható.</b><br><b>Különböző alany → damit.</b><br>Azonos alany esetén a <b>damit</b> is lehetséges, teljes mellékmondattal. Ebben a választós feladatban a mondat már megadott folytatása dönti el, melyik illik a hiányba.</p>
+<p>A <b>wollen / möchten</b> az <b>um … zu</b> szerkezetben, a <b>wollen / möchten / sollen</b> pedig a <b>damit</b>-mondatban nem jelenik meg, ha csak a célt fejezi ki.</p></div><div class="card example"><h2>Beispiel</h2><p>Ich lerne regelmäßig, <b>um die Prüfung zu bestehen.</b><br>
+Ich erkläre es noch einmal, <b>damit alle es verstehen.</b></p></div>
+      <div class="card tasks"><h2>Übung</h2><p class="instruction">Wähle <b>um</b> oder <b>damit</b>.</p>
+    <div class="item">
+      <div class="n">1</div>
+      <div class="work">
+        
+        <div class="sentence">Ich nehme eine Powerbank mit, <select class="answer" data-answer="damit"><option value="">– wählen –</option><option>um</option><option>damit</option></select> mein Handy unterwegs nicht ausgeht.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">2</div>
+      <div class="work">
+        
+        <div class="sentence">Nora besucht einen Erste-Hilfe-Kurs, <select class="answer" data-answer="um"><option value="">– wählen –</option><option>um</option><option>damit</option></select> im Notfall helfen zu können.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">3</div>
+      <div class="work">
+        
+        <div class="sentence">Der Verein verschickt eine Erinnerung, <select class="answer" data-answer="damit"><option value="">– wählen –</option><option>um</option><option>damit</option></select> niemand den Termin vergisst.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">4</div>
+      <div class="work">
+        
+        <div class="sentence">Wir verwenden starke Passwörter, <select class="answer" data-answer="um"><option value="">– wählen –</option><option>um</option><option>damit</option></select> unsere Konten besser zu schützen.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="check" type="button" onclick="checkPage(this)">Überprüfen</button>
+      <button type="button" onclick="showSolutions(this)">Lösung</button>
+      <button type="button" onclick="resetPage(this)">Neu beginnen</button>
+    </div></div>
+    </section>
+    <section class="page exercise" id="zu">
+      <header class="topbar">
+        <button class="home" onclick="goHome()" aria-label="Startseite"><span class="houseIcon" aria-hidden="true"></span><span>Startseite</span></button>
+        <div><div class="eyebrow">FINALSÄTZE · B2/B2+</div><h1>zu + Dativ</h1><p>Finale Präposition mit Nominalisierung.</p></div>
+      </header>
+      <div class="card rule"><h2>Regel</h2>
+<p><b>Wozu?</b></p>
+<p><b>zu + Dativ</b> esetén a célt főnévvel fejezzük ki. Az igéből megfelelő főnevet képzünk (<b>Nominalisierung</b>).</p>
+<p><i>überprüfen → die Überprüfung · vorbereiten → die Vorbereitung · schützen → der Schutz</i></p>
+<p><b>zu dem → zum · zu der → zur</b></p></div><div class="card example"><h2>Beispiel</h2><p><b>Die Angaben sollen überprüft werden.</b><br>
+überprüfen → <i>die Überprüfung</i><br>
+→ Die Daten werden <b>zur Überprüfung der Angaben</b> gespeichert.</p></div>
+      <div class="card tasks"><h2>Übung</h2><p class="instruction">Forme das Verb in ein Nomen um und verwende <b>zu + Dativ</b>.</p>
+    <div class="item">
+      <div class="n">1</div>
+      <div class="work">
+        
+        <div class="sentence">Die Angaben sollen überprüft werden. Die Daten werden <input class="answer l" data-answer="zur Überprüfung der Angaben||zur Überprüfung der Angaben." autocomplete="off" spellcheck="false"> gespeichert.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">2</div>
+      <div class="work">
+        
+        <div class="sentence">Die Veranstaltung soll vorbereitet werden. Wir treffen uns <input class="answer l" data-answer="zur Vorbereitung der Veranstaltung" autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">3</div>
+      <div class="work">
+        
+        <div class="sentence">Die Daten sollen geschützt werden. Wir verwenden ein sicheres Passwort <input class="answer l" data-answer="zum Schutz der Daten||zum Schutz der Daten." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">4</div>
+      <div class="work">
+        
+        <div class="sentence">Die neuen Freiwilligen sollen informiert werden. Morgen findet ein Treffen <input class="answer xl" data-answer="zur Information der neuen Freiwilligen||zur Information der neuen Freiwilligen." autocomplete="off" spellcheck="false"> statt.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">5</div>
+      <div class="work">
+        
+        <div class="sentence">Das Projekt soll durchgeführt werden. Der Verein braucht zusätzliche Helfer <input class="answer l" data-answer="zur Durchführung des Projekts||zur Durchführung des Projektes" autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="check" type="button" onclick="checkPage(this)">Überprüfen</button>
+      <button type="button" onclick="showSolutions(this)">Lösung</button>
+      <button type="button" onclick="resetPage(this)">Neu beginnen</button>
+    </div></div>
+    </section>
+    <section class="page exercise" id="fuer">
+      <header class="topbar">
+        <button class="home" onclick="goHome()" aria-label="Startseite"><span class="houseIcon" aria-hidden="true"></span><span>Startseite</span></button>
+        <div><div class="eyebrow">FINALSÄTZE · B2/B2+</div><h1>für + Akkusativ</h1><p>Wofür ist etwas bestimmt oder gedacht?</p></div>
+      </header>
+      <div class="card rule"><h2>Regel</h2>
+<p><b>Wofür?</b></p>
+<p><b>für + Akkusativ</b> azt fejezi ki, hogy mire használunk, szánunk vagy biztosítunk valamit. A célt főnévvel fejezzük ki; az igéből megfelelő főnevet képzünk (<b>Nominalisierung</b>).</p>
+<p><i>vorbereiten → die Vorbereitung · organisieren → die Organisation · reparieren → die Reparatur</i></p></div><div class="card example"><h2>Beispiel</h2><p><b>Die Präsentation soll vorbereitet werden.</b><br>
+vorbereiten → <i>die Vorbereitung</i><br>
+→ Ich brauche das Tablet <b>für die Vorbereitung der Präsentation.</b></p></div>
+      <div class="card tasks"><h2>Übung</h2><p class="instruction">Forme das Verb in ein Nomen um und verwende <b>für + Akkusativ</b>.</p>
+    <div class="item">
+      <div class="n">1</div>
+      <div class="work">
+        
+        <div class="sentence">Die Präsentation soll vorbereitet werden. Ich brauche das Tablet <input class="answer xl" data-answer="für die Vorbereitung der Präsentation||für die Vorbereitung der Präsentation." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">2</div>
+      <div class="work">
+        
+        <div class="sentence">Die Veranstaltung soll organisiert werden. Wir nutzen eine gemeinsame App <input class="answer xl" data-answer="für die Organisation der Veranstaltung||für die Organisation der Veranstaltung." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">3</div>
+      <div class="work">
+        
+        <div class="sentence">Das Fahrrad soll repariert werden. Ich brauche neues Werkzeug <input class="answer l" data-answer="für die Reparatur des Fahrrads||für die Reparatur des Fahrrades" autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">4</div>
+      <div class="work">
+        
+        <div class="sentence">Die Teilnehmer sollen angemeldet werden. Wir verwenden ein Onlineformular <input class="answer l" data-answer="für die Anmeldung der Teilnehmer||für die Anmeldung der Teilnehmer." autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="n">5</div>
+      <div class="work">
+        
+        <div class="sentence">Das Projekt soll finanziert werden. Der Verein sammelt Spenden <input class="answer l" data-answer="für die Finanzierung des Projekts||für die Finanzierung des Projektes" autocomplete="off" spellcheck="false">.</div>
+        <div class="feedback"></div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="check" type="button" onclick="checkPage(this)">Überprüfen</button>
+      <button type="button" onclick="showSolutions(this)">Lösung</button>
+      <button type="button" onclick="resetPage(this)">Neu beginnen</button>
+    </div></div>
+    </section><script>
+function openPage(id){
+ const home=document.getElementById('home');
+ document.querySelectorAll('.exercise').forEach(p=>p.classList.remove('active'));
+ if(id==='home'){home.classList.remove('inactive');}
+ else{home.classList.add('inactive');document.getElementById(id).classList.add('active');}
+ window.scrollTo(0,0);
+}
+function goHome(){openPage('home')}
+function clean(s){return s.trim().toLowerCase().replace(/^,\s*/,'').replace(/[.?!]+$/,'').replace(/\s+/g,' ')}
+function accepted(el){return (el.dataset.answer||'').split('||').map(clean)}
+function checkPage(btn){
+ const card=btn.closest('.tasks'); const els=[...card.querySelectorAll('.answer')];
+ els.forEach(el=>{
+   const ok=accepted(el).includes(clean(el.value)); el.classList.toggle('ok',ok);el.classList.toggle('bad',!ok);
+   const fb=el.closest('.work').querySelector('.feedback');
+   fb.className='feedback '+(ok?'good':'wrong');fb.textContent=ok?'Richtig.':'Bitte noch einmal prüfen.';
+ });
+}
+function showSolutions(btn){
+ const card=btn.closest('.tasks'); let old=card.querySelector('.solutionbox');if(old){old.remove();return}
+ const els=[...card.querySelectorAll('.answer')]; const box=document.createElement('div');box.className='solutionbox';
+ box.innerHTML='<b>Lösungen</b><ol>'+els.map(el=>'<li>'+el.dataset.answer.split('||').filter((a,i,all)=>all.findIndex(b=>clean(b)===clean(a))===i).join(' / ')+'</li>').join('')+'</ol>';
+ card.appendChild(box);
+}
+function resetPage(btn){
+ const card=btn.closest('.tasks');card.querySelectorAll('.answer').forEach(el=>{el.value='';el.classList.remove('ok','bad')});
+ card.querySelectorAll('.feedback').forEach(x=>{x.textContent='';x.className='feedback'});
+ const s=card.querySelector('.solutionbox');if(s)s.remove();
+}
+</script></body></html>
